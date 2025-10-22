@@ -1,0 +1,27 @@
+:root {
+  /* Primary Colors */
+  --color-primary: #5356FF;        /* light teal */
+  --color-primary-hover: #DFF5FF;  /* accent red */
+  --color-background: #0f0f0f;     /* main background */
+  --color-section-bg: #111;        /* section background */
+  --color-footer-bg: #0b0b0b;      /* footer background */
+  --color-text-light: #F7F7F7;        /* main text */
+  --color-text-muted: #eee;        /* secondary text */
+  --color-text-alt: rgba(155,178,180,1.0); /* alternative text / buttons */
+
+  /* Fonts */
+  --font-sans: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+  /* Button Styling */
+  --btn-padding: 14px 40px;
+  --btn-radius: 10px;
+
+  /* Shadows */
+  --shadow-card: 0 15px 40px rgba(0,0,0,0.5);
+
+  /* Spacing */
+  --space-small: 10px;
+  --space-medium: 20px;
+  --space-large: 40px;
+  --space-xlarge: 80px;
+}
