@@ -1,7 +1,6 @@
 import React from "react";
 import "./../theme.css";
 import "./LandingPage.css";
-import Navbar from "../Modules/NavBar/Navbar";
 import Header from "../Modules/Header/Header";
 
 export default function LandingPage() {
@@ -21,7 +20,6 @@ export default function LandingPage() {
             >
                 Explore Pulse Engine
             </a>}/>
-        <Navbar/>
 
       <section className="Landing-section">
         <div className="Landing-section-text">
