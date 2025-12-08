@@ -1,0 +1,83 @@
+.Contact-module {
+  padding: 80px 40px;
+  background: #0b0b0b;
+  color: #eee;
+  text-align: center;
+}
+
+.Contact-module h2 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  background: linear-gradient(90deg, #5356ff, #7b5fff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 15px;
+}
+
+.Contact-module p {
+  color: #aaa;
+  margin-bottom: 50px;
+  font-size: 1.1rem;
+}
+
+.Contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.Input-group {
+  position: relative;
+}
+
+.Input-group input,
+.Input-group textarea {
+  width: 100%;
+  padding: 16px 16px 16px 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 2px solid #5356ff;
+  border-radius: 12px;
+  color: #eee;
+  font-size: 1rem;
+  outline: none;
+  resize: none;
+}
+
+.Input-group label {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #aaa;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.Input-group input:focus + label,
+.Input-group input:not(:placeholder-shown) + label,
+.Input-group textarea:focus + label,
+.Input-group textarea:not(:placeholder-shown) + label {
+  top: -10px;
+  font-size: 0.8rem;
+  color: #5356ff;
+  background: #0b0b0b;
+  padding: 0 5px;
+}
+
+.Contact-submit {
+  padding: 14px 0;
+  border: none;
+  border-radius: 12px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  cursor: pointer;
+  color: #fff;
+  background: #5356ff;
+  transition: all 0.3s ease;
+}
+
+.Contact-submit:hover {
+  transform: scale(1.05);
+}

@@ -1,0 +1,29 @@
+.Landing-nav {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  padding: 20px 40px;
+  background-color: #0c0c0c;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  flex-wrap: wrap;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+}
+
+.Landing-nav-button-outline {
+  font-weight: bold;
+  padding: 12px 28px;
+  border: 2px solid #555;
+  border-radius: 8px;
+  color: #aaa;
+  text-decoration: none;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.Landing-nav-button-outline:hover {
+  color: #5356FF;
+  border-color: #5356FF;
+  transform: translateY(-2px);
+}

@@ -1,22 +1,26 @@
-import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import React from 'react';
+import Navbar from './components/Navbar/Navbar';
+import Hero from './components/Hero/Hero';
+import Features from './components/Features/Features';
+import Carousel from './components/Carousel/Carousel';
+import Testimonials from './components/Testimonials/Testimonials';
+import Contact from './components/Contact/Contact';
+import Footer from './components/Footer/Footer';
+import './App.css';
 
-import LandingPage from "./pages/LandingPage.js";
-import PatchNote from "./pages/PatchNote.js";
-import Downloads from "./pages/Downloads.js";
-import Docs from "./pages/Docs.js";
-import Contact from "./pages/Contact.js";
-
-export default function App() {
+function App() {
+  document.title = "Pulse Software";
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<LandingPage />} />
-        <Route path="/patchnote" element={<PatchNote />} />
-        <Route path="/downloads" element={<Downloads />} />
-        <Route path="/docs" element={<Docs />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
-    </Router>
+    <div className="app">
+      <Navbar />
+      <Hero />
+      <Features />
+      <Carousel />
+      <Testimonials />
+      <Contact />
+      <Footer />
+    </div>
   );
 }
+
+export default App;
