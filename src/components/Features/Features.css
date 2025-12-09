@@ -63,7 +63,9 @@
           display: grid;
           grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
           gap: 2rem;
-          position: relative;
+          position: relative;  
+          text-decoration: none;
+          color: inherit;    
         }
 
         .feature-card {
@@ -78,6 +80,8 @@
           overflow: hidden;
           opacity: 0;
           transform: translateY(30px);
+          text-decoration: none;
+          color: inherit;    
         }
 
         .feature-card.visible {

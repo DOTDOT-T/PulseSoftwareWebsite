@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import "./Hero.css";
 
 export default function Hero() {
+  // eslint-disable-next-line
   const [scrollY, setScrollY] = useState(0);
 
   useEffect(() => {

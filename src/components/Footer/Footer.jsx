@@ -1,3 +1,4 @@
+// eslint-disable-next-line
 import React from 'react';
 import './Footer.css';
 
@@ -21,7 +22,7 @@ export default function Footer() {
             <ul>
               {col.links.map((link, i) => (
                 <li key={i}>
-                  <a href="#">{link}</a>
+                  <a href={`#${link}`}>{link}</a>
                 </li>
               ))}
             </ul>

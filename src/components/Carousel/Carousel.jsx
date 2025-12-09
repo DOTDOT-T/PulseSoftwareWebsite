@@ -2,32 +2,34 @@ import React, { useState, useEffect } from 'react';
 
 export default function Carousel() {
   const [current, setCurrent] = useState(0);
+  // eslint-disable-next-line
   const [direction, setDirection] = useState('next');
   const [isPaused, setIsPaused] = useState(false);
 
-  const slides = [
-    { 
-      title: 'Innovate Freely', 
-      desc: 'Empowering developers to create without limits',
-      icon: '🚀',
-      color: '#8b5cf6',
-      stat: '10K+ creators'
-    },
-    { 
-      title: 'Global Reach', 
-      desc: 'Connecting your ideas to the world',
-      icon: '🌍',
-      color: '#3b82f6',
-      stat: '120+ countries'
-    },
-    { 
-      title: 'Cutting Edge', 
-      desc: 'Next-gen engines, apps, and integrations',
-      icon: '⚡',
-      color: '#ec4899',
-      stat: '99.9% uptime'
-    },
-  ];
+const slides = [
+  {
+    title: 'We Listen & Deliver',
+    desc: 'We build solutions tailored to what developers and creators actually need, not just flashy features.',
+    icon: '🛠️',
+    color: '#8b5cf6',
+    stat: 'User-Centric Design'
+  },
+  {
+    title: 'Save Time & Accelerate',
+    desc: 'Streamline your workflow, reduce friction, and focus on building instead of configuring or maintaining.',
+    icon: '⏱️',
+    color: '#3b82f6',
+    stat: 'Faster Development'
+  },
+  {
+    title: 'Global & Reliable',
+    desc: 'Deploy confidently worldwide with tools that scale, stay secure, and maintain 99.9% uptime.',
+    icon: '🌐',
+    color: '#ec4899',
+    stat: 'Trusted Everywhere'
+  }
+];
+
 
   useEffect(() => {
     if (isPaused) return;

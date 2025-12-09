@@ -1,55 +1,54 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import "./Features.css";
 
 export default function Features() {
   const [activeCard, setActiveCard] = useState(null);
   const [visibleCards, setVisibleCards] = useState([]);
   const sectionRef = useRef(null);
+const features = [
+  {
+    icon: '🌐',
+    title: 'Cloud SaaS Platform',
+    desc: 'Seamlessly deploy, collaborate, and scale your apps and projects from anywhere in the world.',
+    color: '#3b82f6',
+    stats: 'Plans from €2.99/month',
+    path: '/products/saas'
+  },
+  {
+    icon: '🔧',
+    title: 'Unity Productivity Suite',
+    desc: 'Enhance your Unity workflow with tools that save time, reduce friction, and increase performance.',
+    color: '#ec4899',
+    stats: 'Workflow Boost',
+    path: '/products/unity-tools'
+  },
+  {
+    icon: '📊',
+    title: 'Analytics & Insights',
+    desc: 'Get actionable insights into performance, engagement, and growth to make smarter decisions fast.',
+    color: '#6366f1',
+    stats: 'Data-Driven Decisions',
+    path: '/products/analytics'
+  },
+  {
+    icon: '⚡',
+    title: 'On-Demand Tools',
+    desc: 'Request custom tools or features and get them delivered fast, tailored to your project’s needs.',
+    color: '#f59e0b',
+    stats: 'Built for Your Needs',
+    path: '/products/on-demand'
+  },
+  {
+    icon: '🤝',
+    title: 'Consulting & Support',
+    desc: 'Our team works with you to optimize your workflow, integrate solutions, and accelerate your development pipeline.',
+    color: '#10b981',
+    stats: 'Expert Guidance',
+    path: '/products/support'
+  }
+];
 
-  const features = [
-    { 
-      icon: '🎮', 
-      title: 'Game Engine', 
-      desc: 'Build AAA games with our powerful engine',
-      color: '#8b5cf6',
-      stats: '2M+ downloads'
-    },
-    { 
-      icon: '🌐', 
-      title: 'Web Apps', 
-      desc: 'Deploy scalable web applications instantly',
-      color: '#3b82f6',
-      stats: '99.9% uptime'
-    },
-    { 
-      icon: '🔧', 
-      title: 'Unity Tools', 
-      desc: 'Enhance your Unity workflow',
-      color: '#ec4899',
-      stats: '50K+ users'
-    },
-    { 
-      icon: '☁️', 
-      title: 'Cloud Services', 
-      desc: 'Seamless cloud integration',
-      color: '#10b981',
-      stats: 'Global CDN'
-    },
-    { 
-      icon: '📊', 
-      title: 'Analytics', 
-      desc: 'Real-time performance insights',
-      color: '#f59e0b',
-      stats: 'Live data'
-    },
-    { 
-      icon: '🔒', 
-      title: 'Security', 
-      desc: 'Enterprise-grade protection',
-      color: '#ef4444',
-      stats: 'SOC 2 certified'
-    },
-  ];
 
   // Intersection Observer for scroll animations
   useEffect(() => {
@@ -75,8 +74,6 @@ export default function Features() {
 
   return (
     <section className="features-section-enhanced" id="products" ref={sectionRef}>
-
-
       <div className="section-header">
         <div className="section-badge">Our Platform</div>
         <h2>Powerful Features</h2>
@@ -85,8 +82,9 @@ export default function Features() {
 
       <div className="features-grid-enhanced">
         {features.map((feature, idx) => (
-          <div
+          <Link
             key={idx}
+            to={feature.path}
             data-index={idx}
             className={`feature-card ${visibleCards.includes(idx) ? 'visible' : ''} ${activeCard === idx ? 'active' : ''}`}
             style={{ '--card-color': feature.color }}
@@ -106,13 +104,13 @@ export default function Features() {
 
             <p>{feature.desc}</p>
 
-            <a href="#" className="feature-link">
+            <div className="feature-link">
               Learn more
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                 <path d="M6 3L11 8L6 13" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
               </svg>
-            </a>
-          </div>
+            </div>
+          </Link>
         ))}
       </div>
     </section>

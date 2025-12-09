@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './Navbar.css';
+import { Link } from 'react-router-dom';
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -15,7 +16,7 @@ export default function Navbar() {
   return (
     <nav className={`navbar ${scrolled ? 'navbar-scrolled' : ''}`}>
       <div className="nav-container">
-        <div className="nav-logo">Pulse Software</div>
+        <div className="nav-logo"><Link to="/">Pulse Software</Link></div>
         <ul className="nav-links">
           <li><a href="#products">Products</a></li>
           <li><a href="#about">About</a></li>
