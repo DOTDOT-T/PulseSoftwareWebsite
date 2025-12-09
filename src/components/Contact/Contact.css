@@ -8,6 +8,16 @@
   margin: 0 auto;
 }
 
+.section-title h2 {
+  color: #fff;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+.section-title p {
+  color: #aaa;
+  margin-bottom: 2rem;
+}
+
 .contact-card {
   background: rgba(26, 26, 26, 0.5);
   backdrop-filter: blur(10px);
@@ -29,7 +39,8 @@
 }
 
 .form-group input,
-.form-group textarea {
+.form-group textarea,
+.form-group select {
   width: 100%;
   padding: 1rem;
   background: rgba(0, 0, 0, 0.5);
@@ -42,15 +53,11 @@
 }
 
 .form-group input:focus,
-.form-group textarea:focus {
+.form-group textarea:focus,
+.form-group select:focus {
   outline: none;
   border-color: #8b5cf6;
   box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.1);
-}
-
-.form-group textarea {
-  resize: vertical;
-  min-height: 150px;
 }
 
 .submit-btn {
@@ -73,4 +80,15 @@
 
 .submit-btn.success {
   background: linear-gradient(135deg, #10b981, #059669);
+}
+
+.status-msg {
+  color: #f87171;
+  margin-top: 1rem;
+}
+
+.privacy-note {
+  margin-top: 1.5rem;
+  color: #666;
+  font-size: 0.875rem;
 }

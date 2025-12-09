@@ -16,7 +16,7 @@ function Home() {
       <Hero />
       <Features />
       <Carousel />
-      <Testimonials />
+      {/* <Testimonials /> */}
       <Contact />
     </>
   );
