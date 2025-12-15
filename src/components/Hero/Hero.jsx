@@ -20,45 +20,48 @@ export default function Hero() {
         <div className="hero-content">
           <div className="hero-badge">
             <span className="badge-dot"></span>
-            Now in Beta
+            Nos nouveaux produits sont là!
           </div>
 
           <h1>
-            <span className="gradient-text">Build the Future</span>
+            <span className="gradient-text">Construire le futur</span>
             <br />
-            <span className="white-text">with Pulse</span>
+            <span className="white-text">Avec Pulse</span>
           </h1>
 
           <p className="hero-subtitle">
-            One platform, infinite possibilities. Build games, deploy apps, and accelerate your workflow with cutting-edge tools designed for modern creators.
+            Une platforme, des possibilités infinies. Créez des jeux, déployez des applications et accélérez votre flux de travail avec des outils de pointe conçus pour les créateurs modernes.
           </p>
 
           <div className="hero-buttons">
             <a href="#contact" className="btn btn-primary">
-              Get Started
+              Commencer
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
                 <path d="M6 3L11 8L6 13" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
               </svg>
             </a>
             <a href="#about" className="btn btn-outline">
-              Watch Demo
+              Demo
             </a>
           </div>
 
           <div className="hero-stats">
             <div className="stat-item">
-              <h3>10K+</h3>
-              <p>Active Users</p>
+              <h2>1 plateforme</h2>
+              <p>Pour créer, tester et livrer</p>
             </div>
             <div className="stat-item">
-              <h3>50K+</h3>
-              <p>Projects</p>
+              <h2>personnalisable</h2>
+              <p>Outils et services sur-mesure</p>
             </div>
             <div className="stat-item">
-              <h3>120+</h3>
-              <p>Countries</p>
+              <h2>Flow intégré</h2>
+              <p>Du prototype au produit final</p>
             </div>
           </div>
+
+
+
         </div>
 
         <div className="hero-visual">
@@ -67,14 +70,14 @@ export default function Hero() {
           
           <div className="hero-card">
             {[
-              { width: 85, label: 'Performance' },
-              { width: 92, label: 'Reliability' },
-              { width: 78, label: 'Scalability' }
+              { label: 'Performance', description: 'Optimisé pour la création rapide et fluide', width: 90 },
+              { label: 'Fiabilité', description: 'Outils stables et services fiables', width: 85 },
+              { label: 'Scalabilité', description: 'Du prototype au produit final sans friction', width: 80 },
             ].map((item, idx) => (
               <div key={idx} className="feature-row">
                 <div className="feature-icon"></div>
                 <div className="feature-text">
-                  <div className="feature-label">{item.label}</div>
+                  <div className="feature-label">{item.label} - {item.description}</div>
                   <div className="feature-bar">
                     <div 
                       className="feature-bar-fill" 
@@ -82,10 +85,12 @@ export default function Hero() {
                     ></div>
                   </div>
                   <div className="feature-percentage">{item.width}%</div>
+
                 </div>
               </div>
             ))}
           </div>
+
         </div>
       </div>
     </section>

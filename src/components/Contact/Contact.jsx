@@ -18,7 +18,7 @@ export default function Contact() {
     e.preventDefault();
 
     if (!formData.name || !formData.email || !formData.message || !formData.projectType) {
-      setStatus('Please fill all required fields');
+      setStatus('Un des champs requis est manquant.');
       return;
     }
 
@@ -35,7 +35,7 @@ export default function Contact() {
         setTimeout(() => setStatus(''), 3000);
       })
       .catch(() => {
-        setStatus('Failed to send, try again.');
+        setStatus('Une erreur est survenue. Veuillez réessayer plus tard.');
       });
   };
 
@@ -43,20 +43,20 @@ export default function Contact() {
     <section className="contact-section" id="contact">
       <div className="contact-container">
         <div className="section-title">
-          <h2>Start Your Project</h2>
-          <p>I’ll get back to you within 24h with an estimate or technical proposal.</p>
+          <h2>Commençons votre projet</h2>
+          <p>Nous vous contacterons rapidement après avoir reçu votre demande.</p>
         </div>
 
         <div className="contact-card">
           {/* Name */}
           <div className="form-group">
-            <label htmlFor="name">Name</label>
+            <label htmlFor="name">Nom</label>
             <input
               type="text"
               id="name"
               value={formData.name}
               onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-              placeholder="Your name"
+              placeholder="Votre nom"
             />
           </div>
 
@@ -68,40 +68,41 @@ export default function Contact() {
               id="email"
               value={formData.email}
               onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-              placeholder="your@email.com"
+              placeholder="votre@email.com"
             />
           </div>
 
           {/* Project Type */}
           <div className="form-group">
-            <label htmlFor="projectType">Project Type</label>
+            <label htmlFor="projectType">Type de projet</label>
             <select
               id="projectType"
               value={formData.projectType}
               onChange={(e) => setFormData({ ...formData, projectType: e.target.value })}
             >
-              <option value="">Select...</option>
-              <option value="unity-tool">Unity Tool</option>
-              <option value="gameplay-prototype">Gameplay Prototype</option>
-              <option value="web-app">Web App</option>
-              <option value="custom-tool">Custom Tool</option>
+              <option value="">Selectionner...</option>
+              <option value="Services aux entreprises">Services aux entreprises</option>
+              <option value="Outils web & apps">Outils web & apps</option>
+              <option value="Outils pour développeurs">Outils pour développeurs</option>
+              <option value="Outil custom">Outil custom</option>
+              <option value="Consulting & Support">Consulting & Support</option>
               <option value="other">Other</option>
             </select>
           </div>
 
           {/* Budget */}
           <div className="form-group">
-            <label htmlFor="budget">Estimated Budget (optional)</label>
+            <label htmlFor="budget">Estimation du budget (optionnel)</label>
             <select
               id="budget"
               value={formData.budget}
               onChange={(e) => setFormData({ ...formData, budget: e.target.value })}
             >
-              <option value="">Select...</option>
-              <option value="<300">Less than 300€</option>
+              <option value="">Selectionner...</option>
+              <option value="<300">Moins de 300€</option>
               <option value="300-800">300–800€</option>
               <option value="800-1500">800–1500€</option>
-              <option value="1500+">1500€+</option>
+              <option value="1500+">plus de 1500€</option>
             </select>
           </div>
 
@@ -112,7 +113,7 @@ export default function Contact() {
               id="message"
               value={formData.message}
               onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-              placeholder="Tell me about your project..."
+              placeholder="Parlez nous de votre projet..."
               rows={5}
             />
           </div>
@@ -122,12 +123,12 @@ export default function Contact() {
             className={`submit-btn ${status === 'success' ? 'success' : ''}`}
             onClick={handleSubmit}
           >
-            {status === 'success' ? 'Message Sent! ✓' : 'Request a Quote'}
+            {status === 'success' ? 'Message envoyé! ✓' : 'Envoyez votre demande'}
           </button>
 
           {status && status !== 'success' && <p className="status-msg">{status}</p>}
 
-          <p className="privacy-note">Your data is never shared. Response within 24–48h.</p>
+          <p className="privacy-note">vos données ne seront jamais partagés. Réponse sous 24 heures.</p>
         </div>
       </div>
     </section>
